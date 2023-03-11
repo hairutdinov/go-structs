@@ -33,5 +33,11 @@ func main() {
 			zipCode: "94000",
 		},
 	}
-	fmt.Printf("%+v", jim)
+	// fmt.Printf("%+v", jim)
+	jim.print()
+}
+
+func (p person) print() {
+	fmt.Printf("First name: %s\nLast name: %s\n", p.firstName, p.lastName)
+	fmt.Printf("Contact:\nEmail: %s\nZip code: %s\n", p.contact.email, p.contact.zipCode)
 }
